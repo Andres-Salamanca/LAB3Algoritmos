@@ -4,20 +4,28 @@
 #include <limits>
 
 
-void reconstruccion(std::vector<int>&M){
+void reconstruccion(std::vector<int>&M,std::vector<int>&E){
+  std::vector<int>subarray;
   int n = M.size();
-  for( int i = n ; i>=0 ; i-- ){
-    if(i>=n){
-      continue;
+  int i = 0;
+  while (i<n) {
+    if(M[i] == E[i]+M[i+2]){
+      subarray.push_back(E[i]);
+      i+=2;
+
     }else {
-      
-    }
-
+      i++;
+    }  
   }
-
-
-
+ 
+  std::cout << "Subcadena reconstruida: ";
+  for (int elem : subarray) {
+    std::cout << elem << " ";
+   }
+    std::cout << std::endl;
 }
+
+
 int MCS_BU(std::vector<int>&E){
  int n = E.size();
   std::vector<int>M( n+1 , std::numeric_limits<int>::min() );
@@ -31,11 +39,7 @@ int MCS_BU(std::vector<int>&E){
     }
 
   } 
-  for (auto elem :M){
-    std::cout << elem << " ";
-  }
-  std::cout <<"\n";
-
+  reconstruccion(M,E);
   return M[0];
 }
 
