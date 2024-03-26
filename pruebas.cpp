@@ -37,7 +37,10 @@ void procesarEntradas(const std::string& archivo, const std::string& salida) {
             while (std::getline(ss, elemento, ',')) {
                 entrada_vector.push_back(std::stoi(elemento));
             }
-
+            // for (int elem : entrada_vector) {
+            // std::cout << elem << " ";
+            // }
+            // std::cout << std::endl;
             // Medir tiempo de ejecución de MCS_MEM
             auto start = std::chrono::steady_clock::now();
             int result_MCS_MEM = MCS(entrada_vector);

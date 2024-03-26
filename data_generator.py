@@ -13,7 +13,7 @@ num_elementos = 10
 # Abrir archivo de salida en modo escritura
 with open(archivo_salida, "w") as file:
     # Generar líneas con incremento de 10 elementos hasta llegar a 1000
-    while num_elementos <= 1000:
+    while num_elementos <= 2000:
         # Generar línea con la cantidad actual de elementos
         linea = generar_linea(num_elementos)
         # Escribir la línea en el archivo
