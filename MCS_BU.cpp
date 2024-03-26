@@ -39,12 +39,12 @@ int MCS_BU(std::vector<int>&E){
     }
 
   } 
-  reconstruccion(M,E);
+  //reconstruccion(M,E);
   return M[0];
 }
 
-int main (int argc, char *argv[]) {
-  std::vector<int> input = {22,5,7,21,3,6};
-  std::cout<<  "respuesta:  " << MCS_BU(input)<<"\n";
-  return 0;
-}
+// int main (int argc, char *argv[]) {
+//   std::vector<int> input = {22,5,7,21,3,6};
+//   std::cout<<  "respuesta:  " << MCS_BU(input)<<"\n";
+//   return 0;
+// }

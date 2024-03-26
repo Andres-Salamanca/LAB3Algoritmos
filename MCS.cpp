@@ -26,8 +26,8 @@ int MCS(std::vector<int>&E){
 
 }
 
-int main (int argc, char *argv[]) {
-  std::vector<int> input = {22,5,7,21,3,6};
-  std::cout<<  "respuesta:  " << MCS(input)<<"\n";
-  return 0;
-}
+// int main (int argc, char *argv[]) {
+//   std::vector<int> input = {22,5,7,21,3,6};
+//   std::cout<<  "respuesta:  " << MCS(input)<<"\n";
+//   return 0;
+// }
