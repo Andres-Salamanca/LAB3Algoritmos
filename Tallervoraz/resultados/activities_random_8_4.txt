@@ -1,9 +1,0 @@
-act_0 0 2
-act_1 3 4
-act_2 3 4
-act_3 2 4
-act_4 1 3
-act_5 0 2
-act_6 3 4
-act_7 3 4
-act_8 2 3
