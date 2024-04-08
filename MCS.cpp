@@ -3,7 +3,7 @@
 #include <iostream>
 #include <limits>
 
-int MCS_MEM(std::vector<int>&E,int i,int n,std::vector<int>&M){
+int MCS_MEM( std::vector<int>&E,int i,int n,std::vector<int>&M){
   if(M[i] == std::numeric_limits<int>::min()){
     if(i>=n){
       M[n+1]=0;
@@ -19,7 +19,7 @@ int MCS_MEM(std::vector<int>&E,int i,int n,std::vector<int>&M){
   return M[i];
 }
 
-int MCS(std::vector<int>&E){
+int MCS( std::vector<int>&E){
  
   std::vector<int>M(E.size()+1,std::numeric_limits<int>::min());
   return MCS_MEM(E, 0, E.size(), M);

@@ -4,7 +4,7 @@
 #include <limits>
 
 
-void reconstruccion(std::vector<int>&M,std::vector<int>&E){
+void reconstruccion( std::vector<int>&M, std::vector<int>&E){
   std::vector<int>subarray;
   int n = M.size();
   int i = 0;
@@ -26,7 +26,7 @@ void reconstruccion(std::vector<int>&M,std::vector<int>&E){
 }
 
 
-int MCS_BU(std::vector<int>&E){
+int MCS_BU( std::vector<int>&E){
  int n = E.size();
   std::vector<int>M( n+1 , std::numeric_limits<int>::min() );
   for(int i = n+1 ;i>=0;i--){
@@ -39,12 +39,14 @@ int MCS_BU(std::vector<int>&E){
     }
 
   } 
-  //reconstruccion(M,E);
+  
+  reconstruccion(M,E);
+  
   return M[0];
 }
 
 // int main (int argc, char *argv[]) {
-//   std::vector<int> input = {22,5,7,21,3,6};
+//   std::vector<int> input = {22, 5, 7, 21, 3, 6};
 //   std::cout<<  "respuesta:  " << MCS_BU(input)<<"\n";
 //   return 0;
 // }
